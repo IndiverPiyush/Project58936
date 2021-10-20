@@ -17,30 +17,37 @@ namespace Project58936
 
         protected void BtnLogin_Click(object sender, EventArgs e)
         {
-            String sqlquery = "";
-            String uname = "";
-            String pass = "";
-            String dbuname = "";
-            String dbpass = "";
+            string sqlquery = "";
+            string uname = "";
+            string pass = "";
+            string dbuname = "";
+            string dbpass = "";
+            string route = "";
             if (RadioButton1.Checked)
             {
-                sqlquery = "select user_name, user_password from patient";
-                dbuname = "user_name";
+                sqlquery = "select user_mobile, user_password,user_no from patient";
+                
+                dbuname = "user_mobile";
                 dbpass = "user_password";
+                route = "CategorySelection.aspx";
             }
-            else if (RadioButton2.Checked)
-            {
-                sqlquery = "select doctor_name, doctor_mobile from doctor";
-                dbuname = "doctor_name";
-                dbpass = "doctor_mobile";
-            }
+            //else if (RadioButton2.Checked)
+            //{
+            //    sqlquery = "select doctor_mobile, doctor_password from doctor";
+            //    dbuname = "doctor_mobile";
+            //    dbpass = "doctor_password";
+            //    route = "SelectDoctor.aspx";
+
+            //}
             else
             {
                 sqlquery = "select admin_name, admin_password from admin";
                 dbuname = "admin_name";
                 dbpass = "admin_password";
+                route = "ADMIN.aspx";
+
             }
-            SqlConnection con = new SqlConnection("Data Source=10.3.117.14;Initial Catalog=ShivMVCpractice;Integrated Security=True;Pooling=False");
+            SqlConnection con = new SqlConnection("Data Source=10.3.117.14;Initial Catalog=DAMS_Yashi;Integrated Security=True;Pooling=False");
             con.Open();
             SqlCommand cmd = new SqlCommand(sqlquery, con);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -50,7 +57,11 @@ namespace Project58936
             {
                 if (dr[dbuname].ToString() == uname && dr[dbpass].ToString() == pass)
                 {
-                    Response.Redirect("About.aspx");
+                    if(uname != "DAMS")
+                    {
+                        Session["user_no"] = dr["user_no"];
+                    }
+                    Response.Redirect(route);
                 }
                 else
                 {

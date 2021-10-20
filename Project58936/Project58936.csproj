@@ -128,8 +128,12 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="CategoryRegistration.aspx" />
+    <Content Include="ADMIN.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Review.aspx" />
+    <Content Include="Review.html" />
+    <Content Include="Review1.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -222,6 +226,20 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Review.aspx.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Review.aspx.designer.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Review1.aspx.cs">
+      <DependentUpon>Review1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Review1.aspx.designer.cs">
+      <DependentUpon>Review1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SelectDoctor.aspx.cs">
       <DependentUpon>SelectDoctor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -264,6 +282,13 @@
     <Compile Include="CategoryRegistration.aspx.designer.cs">
       <DependentUpon>CategoryRegistration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ADMIN.aspx.cs">
+      <DependentUpon>ADMIN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN.aspx.designer.cs">
+      <DependentUpon>ADMIN.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -294,7 +319,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56429</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56429/</IISUrl>
+          <IISUrl>http://localhost:56009/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

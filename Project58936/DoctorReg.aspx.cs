@@ -12,7 +12,7 @@ namespace Project58936
 {
     public partial class DoctorReg : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Data Source=10.3.117.14;Initial Catalog=DAMS_AN;Integrated Security=True;Pooling=False");
+        SqlConnection con = new SqlConnection("Data Source=10.3.117.14;Initial Catalog=DAMS;Integrated Security=True;Pooling=False");
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {

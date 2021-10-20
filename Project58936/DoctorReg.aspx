@@ -61,7 +61,7 @@
                 <tr>
                     <td class="auto-style3"><asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="Medium" Text="Select Category:"></asp:Label></td>
                     <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" Height="26px" Width="176px" >
+                        <asp:DropDownList ID="DropDownList1" runat="server" Height="26px" Width="176px" style="margin-left: 28px" >
                         </asp:DropDownList>
                     </td>
                     <td>

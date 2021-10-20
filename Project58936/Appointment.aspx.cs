@@ -13,6 +13,7 @@ namespace Project58936
     public partial class Appointment : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection("Data Source=10.3.117.14;Initial Catalog=DAMS;Integrated Security=True");
+        static int docno = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,8 +22,9 @@ namespace Project58936
             Label4.Text = Calendar1.SelectedDate.AddDays(2).ToShortDateString();
             Label5.Text = Calendar1.SelectedDate.AddDays(3).ToShortDateString();
             con.Open();
-            int docno = int.Parse(Session["doctorSelected"].ToString());
 
+            int dno = int.Parse(Session["doctorSelected"].ToString());
+            docno = dno;
             //int docno = 501;
             string appdate1 = Calendar1.SelectedDate.ToShortDateString();
             Label6.Text = appdate1;
@@ -275,10 +277,10 @@ namespace Project58936
             
             if (double.Parse(Session["fees"].ToString()) > double.Parse(Session["user_wallet"].ToString()))
             {
-                Label6.Text = "Wallet balance is low";
+                /*Label6.Text = "Wallet balance is low";
                 int milliseconds = 5000;
-                Thread.Sleep(milliseconds);
-                Response.Redirect("Login.aspx");
+                Thread.Sleep(milliseconds);*/
+                Response.Redirect("AddWallet.aspx");
 
             }
             else
@@ -288,9 +290,9 @@ namespace Project58936
                 double amt = double.Parse(Session["user_wallet"].ToString()) - double.Parse(Session["fees"].ToString());
                 SqlCommand updateWallet = new SqlCommand("update PATIENT set USER_WALLET =" + amt + "where USER_NO =" + user + "", con);
                 updateWallet.ExecuteNonQuery();
+                Session["user_wallet"] = amt;
                 String book1 = DropDownList1.SelectedItem.Text;
                 String[] data = book1.Split(' ');
-                int docno = 501;
                 Label6.Text = data[0];
                 String SLOT = data[0];
                 string appdate1 = Calendar1.SelectedDate.ToShortDateString();
@@ -331,7 +333,6 @@ namespace Project58936
             con.Open();
             String book1 = DropDownList2.SelectedItem.Text;
             String[] data = book1.Split(' ');
-            int docno = 501;
             Label6.Text = data[0];
             String SLOT = data[0];
             String appdate1 = Calendar1.SelectedDate.AddDays(1).ToShortDateString();
@@ -363,7 +364,6 @@ namespace Project58936
             con.Open();
             String book1 = DropDownList3.SelectedItem.Text;
             String[] data = book1.Split(' ');
-            int docno = 501;
             Label6.Text = data[0];
             String SLOT = data[0];
             string appdate1 = Calendar1.SelectedDate.AddDays(2).ToShortDateString();
@@ -395,7 +395,6 @@ namespace Project58936
             con.Open();
             String book1 = DropDownList4.SelectedItem.Text;
             String[] data = book1.Split(' ');
-            int docno = 501;
             Label6.Text = data[0];
             String SLOT = data[0];
             string appdate1 = Calendar1.SelectedDate.AddDays(3).ToShortDateString();

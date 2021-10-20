@@ -104,7 +104,7 @@
                         <asp:Button ID="Button1" runat="server" Text="Register" Width="105px" Font-Bold="True" Font-Size="Medium" OnClick="Button1_Click" />
                    
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Button2" runat="server" Font-Bold="True" Font-Size="Medium" Text="Cancel" Width="105px" />
+                        <asp:Button ID="Button2" runat="server" Font-Bold="True" Font-Size="Medium" Text="Cancel" Width="105px" OnClick="Button2_Click" />
                         <asp:Label ID="Label9" runat="server" Font-Bold="True" Font-Size="Medium"></asp:Label>
                     </td>
                 </tr> 

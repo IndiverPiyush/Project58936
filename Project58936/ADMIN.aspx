@@ -33,6 +33,7 @@
             &nbsp;&nbsp;&nbsp;
             <br />
             <br />
+            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Login.aspx">Logout</asp:HyperLink>
         </asp:Panel>
             </div>
     </form>

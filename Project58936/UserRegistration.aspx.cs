@@ -33,8 +33,12 @@ namespace Project58936
             
             Label8.Text = "Usesr Registered Successfully!!!!";
             con.Close();
+            
         }
 
-        
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

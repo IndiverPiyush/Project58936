@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddWalletBalanace.aspx.cs" Inherits="Project58936.AddWalletBalanace" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddWallet.aspx.cs" Inherits="Project58936.AddWallet" %>
 
 <!DOCTYPE html>
 
@@ -13,6 +13,7 @@
 <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Overline="True" Font-Size="XX-Large" Font-Underline="True" Text="Update Wallet"></asp:Label>
 <br />
 <br />
+    <asp:Label ID="Label3" runat="server"></asp:Label>
 <br />
 <br />
 <br />
@@ -25,9 +26,14 @@
 <asp:TextBox ID="TextBox1" runat="server" Width="279px"></asp:TextBox>
 <br />
 <br />
-<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Wallet" />
-</asp:Panel>
+    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Wallet" />
+    <br />
+    <br />
+    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/CategorySelection.aspx">Go To Select Category</asp:HyperLink>
+    <br />
+    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Login.aspx">Logout</asp:HyperLink>
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:Panel>
 </div>
 </form>
 </body>

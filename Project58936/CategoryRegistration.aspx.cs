@@ -33,6 +33,9 @@ namespace Project58936
 
         }
 
-
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ADMIN.aspx");
+        }
     }
 }

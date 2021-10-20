@@ -9,9 +9,6 @@
   <style type="text/css">
         * {
             box-sizing: border-box;
-            position: relative;
-                left: 260px;
-}
             /* outline:1px solid ;*/
         }
 
@@ -27,13 +24,21 @@
                 margin-top: 50px;
                 box-shadow: 4px 8px 40px 8px rgba(88, 146, 255, 0.2);
             }
+            .div1{
+                position : relative;
+                left : 20px;
+            }
+            .p1{
+                position : relative;
+                left : 550px;
+            }
         }
     </style>
 </head>
 <body>
     
         <form id="form1" runat="server">
-            <div align="center">
+            <div  class ="div1" align="center">
                 <asp:Panel ID="Panel1" runat="server" BackColor="#FFD988" Height="325px" CssClass="auto-style1" Width="690px">
                     <br />
                     <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Appointment Details : "></asp:Label>
@@ -99,9 +104,11 @@
             <p>
                 &nbsp;
             </p>
-            <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p class ="p1">
+               
                 <asp:Label ID="Label16" runat="server" Font-Bold="True" Font-Size="X-Large" ForeColor="#3333CC" Text="Thank You for using our Web Service !!"></asp:Label>
+                <br />
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Login.aspx">Logout</asp:HyperLink>
             </p>
         </form>
     

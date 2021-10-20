@@ -48,5 +48,10 @@ namespace Project58936
             Label9.Text = "Record saved successfully";
             Response.Redirect("ADMIN.aspx");
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ADMIN.aspx");
+        }
     }
 }

@@ -43,7 +43,9 @@ namespace Project58936
             
             Label2.Text = GridView1.SelectedRow.Cells[1].Text;
             int catId = int.Parse(GridView1.SelectedRow.Cells[1].Text);
+            string catName = GridView1.SelectedRow.Cells[2].Text;
             Session["category"] = catId;
+            Session["categoryName"] = catName;
             Response.Redirect("SelectDoctor.aspx");
         }
       

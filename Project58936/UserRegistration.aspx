@@ -67,13 +67,16 @@
                 <tr>
                     <td colspan="3" align="center">
                         <asp:Button ID="Button1" runat="server" Text="REGISTRATION" OnClick="Button1_Click" />
+                        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="margin-left: 33px" Text="Cancel" />
                     </td>
                 </tr>
                   <tr>
                     <td colspan="3" align="center">
                         
                         <asp:Label ID="Label8" runat="server"></asp:Label>
-                        &nbsp;</td>
+                        &nbsp;<br />
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx">Back To Login</asp:HyperLink>
+                      </td>
                 </tr>
 
                 </table>

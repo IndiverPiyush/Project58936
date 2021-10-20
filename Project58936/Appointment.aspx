@@ -149,6 +149,9 @@
 </table>
         <asp:Button ID="Button1" runat="server" Height="38px" OnClick="Button1_Click" Text="Book Appointment" Width="164px" />
         <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+        <br />
+        <br />
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Login.aspx">Logout</asp:HyperLink>
     </form>
 </body>
 </html>

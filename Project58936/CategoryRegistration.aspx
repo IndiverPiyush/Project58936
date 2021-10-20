@@ -87,6 +87,7 @@ height: 30px;
 <tr>
 <td align="center" class="auto-style2" colspan="3">
 <asp:Button ID="Button1" runat="server" Font-Bold="True" OnClick="Button1_Click" Text="Register" />
+    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Cancel" />
 </td>
 </tr>
 <tr>

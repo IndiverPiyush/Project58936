@@ -9,6 +9,9 @@
   <style type="text/css">
         * {
             box-sizing: border-box;
+            position: relative;
+                left: 260px;
+}
             /* outline:1px solid ;*/
         }
 

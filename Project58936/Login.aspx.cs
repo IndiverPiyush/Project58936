@@ -25,7 +25,7 @@ namespace Project58936
             string route = "";
             if (RadioButton1.Checked)
             {
-                sqlquery = "select user_mobile, user_password,user_no from patient";
+                sqlquery = "select * from patient";
                 
                 dbuname = "user_mobile";
                 dbpass = "user_password";
@@ -47,7 +47,7 @@ namespace Project58936
                 route = "ADMIN.aspx";
 
             }
-            SqlConnection con = new SqlConnection("Data Source=10.3.117.14;Initial Catalog=DAMS_Yashi;Integrated Security=True;Pooling=False");
+            SqlConnection con = new SqlConnection("Data Source=10.3.117.14;Initial Catalog=DAMS;Integrated Security=True;Pooling=False");
             con.Open();
             SqlCommand cmd = new SqlCommand(sqlquery, con);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -60,6 +60,8 @@ namespace Project58936
                     if(uname != "DAMS")
                     {
                         Session["user_no"] = dr["user_no"];
+                        Session["user_wallet"] = dr["USER_WALLET"];
+                        Session["userName"] = dr["USER_NAME"];
                     }
                     Response.Redirect(route);
                 }

@@ -6,11 +6,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Project58936
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DAMS"].ConnectionString);
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,6 +29,7 @@ namespace Project58936
             cmd.ExecuteNonQuery();
             con.Close();
             Label8.Text = "Category Entered Successfully!!!!";
+            Response.Redirect("ADMIN.aspx");
 
         }
 

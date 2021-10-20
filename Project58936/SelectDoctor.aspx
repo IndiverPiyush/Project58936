@@ -32,13 +32,13 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DAMSConnectionString %>" SelectCommand="SELECT * FROM [DOCTOR] WHERE ([DOCTOR_CATEGORY_NO] = @DOCTOR_CATEGORY_NO)">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DAMS_YashiConnectionString %>" SelectCommand="SELECT [DOCTOR_NO], [DOCTOR_NAME], [DOCTOR_MOBILE], [DOCTOR_EMAIL], [DOCTOR_CATEGORY_NO], [DOCTR_FEES] FROM [DOCTOR] WHERE ([DOCTOR_CATEGORY_NO] = @DOCTOR_CATEGORY_NO)">
                 <SelectParameters>
-                    <asp:SessionParameter DefaultValue="" Name="DOCTOR_CATEGORY_NO" SessionField="category" Type="Int32" />
+                    <asp:SessionParameter Name="DOCTOR_CATEGORY_NO" SessionField="category" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label1" runat="server"></asp:Label>
             <br />
             <br />
         </div>

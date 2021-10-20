@@ -46,6 +46,7 @@ namespace Project58936
             cmd.ExecuteNonQuery();
             con.Close();
             Label9.Text = "Record saved successfully";
+            Response.Redirect("ADMIN.aspx");
         }
     }
 }

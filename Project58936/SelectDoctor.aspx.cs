@@ -18,8 +18,12 @@ namespace Project58936
         {
             Label1.Text = GridView1.SelectedRow.Cells[1].Text;
             int docId = int.Parse(GridView1.SelectedRow.Cells[1].Text);
+            string docName = GridView1.SelectedRow.Cells[2].Text;
+            double docfees = double.Parse(GridView1.SelectedRow.Cells[6].Text);
+            Session["docName"] = docName;
+            Session["fees"] = docfees;
             Session["doctorSelected"] = docId;
-            //Response.Redirect("Appointment.aspx");
+            Response.Redirect("Appointment.aspx");
         }
     }
 }

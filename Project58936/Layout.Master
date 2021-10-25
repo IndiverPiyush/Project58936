@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="Project58936.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+    <style>
+        .lname{
+            color : antiquewhite;
+            text-align : left;
+            position: relative;
+            top: 12px;
+            left:-230px;
+            font-size : large;
+        }
+        .tb1{
+            color : antiquewhite;
+            text-align : right;
+            position: relative;
+            top: 15px;
+            right:-200px;
+            font-weight: bold;
+        }
+       a:link, a:hover, a:visited, a:focus-visible{
+           color : antiquewhite;
+       }
+       .footer{
+           color : antiquewhite;
+            text-align : center;
+            position: relative;
+            top: 12px;
+            font-size : large;
+       }
+       .bg{
+           background-color : #F0E5CF;
+       }
+       
+    </style>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+    <%--<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    
+
+</head>--%>
+<body class ="bg">
+            <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <label class ="lname" runat="server">Doctor's Appointment Management System</label>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class ="tb1">
+                        <li style="display:inline" ><a runat="server" href="~/CategorySelection">Book Appointment</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li style="display:inline"><a runat="server" href="~/About">View Appointment</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li style="display:inline"><a runat="server" href="~/Login">Logout</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class ="navbar navbar-inverse navbar-fixed-bottom">
+        <footer>
+                <p class ="footer">&copy; <%: DateTime.Now.Year %> - DAMS</p>
+            </footer>
+            </div>
+    </form>
+</body>
+</html>

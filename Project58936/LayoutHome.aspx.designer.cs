@@ -11,7 +11,7 @@ namespace Project58936
 {
 
 
-    public partial class CategorySelection
+    public partial class LayoutHome
     {
 
         /// <summary>

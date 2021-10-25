@@ -1,6 +1,4 @@
-﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CategorySelection.aspx.cs" Inherits="Project58936.CategorySelection" %>--%>
-
-<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="CategorySelection.aspx.cs" Inherits="Project58936.CategorySelection" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="LayoutHome.aspx.cs" Inherits="Project58936.LayoutHome" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Hi from layout wiht master page...</title>
     <style>

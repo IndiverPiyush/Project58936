@@ -1,17 +1,27 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SelectDoctor.aspx.cs" Inherits="Project58936.SelectDoctor" %>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SelectDoctor.aspx.cs" Inherits="Project58936.SelectDoctor" %>--%>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="SelectDoctor.aspx.cs" Inherits="Project58936.SelectDoctor" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Hi from layout wiht master page...</title>
+    <style>
+        .grid1{
+            position : relative;
+            top : 100px;
+            left : 380px;
+        }
+        #Label1{
+            position : relative;
+            left : 550px;
+        }
+    </style>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            Choose Doctor:
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div class ="grid1"><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Text="SELECT DOCTOR" Font-Bold="True" Font-Size="X-Large"></asp:Label>
             <br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" DataKeyNames="DOCTOR_NO" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <hr />
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="30" DataKeyNames="DOCTOR_NO" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellSpacing="15" Width="978px">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="DOCTOR_NO" HeaderText="DOCTOR_NO" InsertVisible="False" ReadOnly="True" SortExpression="DOCTOR_NO" />
@@ -21,16 +31,15 @@
                     <asp:BoundField DataField="DOCTOR_CATEGORY_NO" HeaderText="DOCTOR_CATEGORY_NO" SortExpression="DOCTOR_CATEGORY_NO" />
                     <asp:BoundField DataField="DOCTR_FEES" HeaderText="DOCTR_FEES" SortExpression="DOCTR_FEES" />
                 </Columns>
-                <EditRowStyle BackColor="#2461BF" />
-                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#EFF3FB" />
-                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                <FooterStyle BackColor="#CCCC99" />
+                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                <RowStyle BackColor="#F7F7DE" />
+                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                <SortedAscendingHeaderStyle BackColor="#848384" />
+                <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                <SortedDescendingHeaderStyle BackColor="#575357" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DAMSConnectionString %>" SelectCommand="SELECT [DOCTOR_NO], [DOCTOR_NAME], [DOCTOR_MOBILE], [DOCTOR_EMAIL], [DOCTOR_CATEGORY_NO], [DOCTR_FEES] FROM [DOCTOR] WHERE ([DOCTOR_CATEGORY_NO] = @DOCTOR_CATEGORY_NO)" ProviderName="<%$ ConnectionStrings:DAMSConnectionString.ProviderName %>">
                 <SelectParameters>
@@ -42,6 +51,4 @@
             <br />
             <br />
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>

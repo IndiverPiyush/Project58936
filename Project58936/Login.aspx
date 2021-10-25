@@ -1,42 +1,48 @@
 ﻿
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Project58936.Login" %>
+<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Project58936.Login" %>--%>
 
-<%--<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Project58936.Login" %>--%>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
+<%@ Page Title="" Language="C#" MasterPageFile="~/LoginLayout.Master" AutoEventWireup="true" CodeBehind="LoginLayout.aspx.cs" Inherits="Project58936.Login" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Hi from layout wiht master page...</title>
+    <style>
         .auto-style1 {
-            height: 50px;
+            height: 80px;
             
         }
-        .auto-style3 {
-            height: 30px;
+        .auto-style2 {
+            position : relative;
+                top: 0px;
+                height: 50px;
+                left: -10px;
         }
-        
+        .auto-style3 {
+            position : relative;
+                top: 0px;
+                height: 50px;
+                left: 90px;
+        }
+        #Panel1{
+            position : relative;
+            top: 250px;
+        }
+        .div1{
+            position : relative;
+            top: 180px;
+        }
     </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div align="center">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-        <asp:Panel ID="Panel1" runat="server" BackColor="#CCFFCC" Height="370px" Width="500px" BorderStyle="Outset">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div class="div1" align ="center">
+        <asp:Panel ID="Panel1" runat="server" BackColor="#F7F6F2" Height="350px" Width="600px" BorderStyle="Outset">
             <table align="Center">
                 <tr>
                     <td class="auto-style1" colspan="2">
-                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Larger" Text=" Appointment Management System Login"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" Text=" Appointment Management System Login"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:Label ID="Label2" runat="server" Text="Login ID :  "></asp:Label>
+                        <asp:Label ID="Label2" runat="server" Text="Login ID :  " Font-Bold="True"></asp:Label>
                     </td>
                     <td class="auto-style3">
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
@@ -46,7 +52,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:Label ID="Label3" runat="server" Text="Password : "></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Text="Password : " Font-Bold="True"></asp:Label>
                     </td>
                     <td class="auto-style3">
                         <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
@@ -62,24 +68,21 @@
                     </td>
                 </tr>
                 <tr>
-                    <td align="Center" class="auto-style3" colspan="2">
+                    <td align="Center" class="auto-style2" colspan="2">
                         <asp:Button ID="BtnLogin" runat="server" Text="Login" OnClick="BtnLogin_Click" />
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label5" runat="server" Text="Label" Font-Italic="True"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:Label ID="Label4" runat="server" Font-Size="Medium" Text="New user ?"></asp:Label>
+                        <asp:Label ID="Label4" runat="server" Font-Size="Medium" Text="New user ?" Font-Bold="True"></asp:Label>
                     </td>
                     <td class="auto-style3">
-                        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Blue" NavigateUrl="~/UserRegistration.aspx">Sign Up</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Blue" NavigateUrl="~/UserRegistration.aspx" Font-Bold="True">Sign Up</asp:HyperLink>
                     </td>
                 </tr>
             </table>
         </asp:Panel>
             </div>
-    </form>
-</body>
-</html>
-
+</asp:Content>
